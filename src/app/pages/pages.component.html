@@ -1,0 +1,36 @@
+<div class="topnav">
+  <!-- <app-header (emitToSidebar)="EmitFromHeaderComponent($event)"></app-header> -->
+
+  <mat-toolbar color="primary" class="mat-elevation-z3">
+    <mat-toolbar-row>
+      <span>Custom Toolbar</span>
+      <button mat-icon-button (click)="collapsed.set(!collapsed())">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <!-- <span class="example-spacer"></span>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>avatar</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Uthaya</button>
+        <button mat-menu-item>Developer</button>
+      </mat-menu> -->
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container>
+    <mat-sidenav
+      mode="side"
+      opened
+      [style.width]="sidenavwidth()"
+      #sidenav
+      class="sidenav"
+    >
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content class="sidenav-content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+<span id="toggleclick" (click)="sidenav.toggle()"></span>

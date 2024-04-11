@@ -1,0 +1,10 @@
+mat-toolbar{
+    position: relative;
+    z-index: 5;
+}
+.menuicon{
+    margin-left: 0.5rem;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }

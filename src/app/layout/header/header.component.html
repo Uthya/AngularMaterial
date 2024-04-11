@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" class="mat-elevation-z3">
+  <mat-toolbar-row>
+    <span>Custom Toolbar</span>
+    <button
+      mat-icon-button
+      class="menuicon"
+      (click)="checktoggle = !checktoggle; emitToggle()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>avatar</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Uthaya</button>
+      <button mat-menu-item>Developer</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
